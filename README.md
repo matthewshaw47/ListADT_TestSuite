@@ -5,8 +5,8 @@ CS 367 Team Assignment
 Print number of successful and failed methods
 
 // Tasks for Nate
--DONE isEmpty
--DONE Check Multiple Items
+- DONE isEmpty
+- DONE Check Multiple Items
 - list order
 - iterator
 - add/remove multiple
