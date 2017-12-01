@@ -1,0 +1,121 @@
+
+==================== TESTING List_Deb
+Passed Tests: 6; Failed Tests: 0
+==================== done
+
+==================== TESTING List_Mingi
+Passed Tests: 6; Failed Tests: 0
+==================== done
+
+==================== TESTING List_Yash
+FAILED test01_List_Add_OneItem for List_Yash
+       Input: List_Yash 
+    expected: 1
+      actual: 0
+FAILED test02_List_Add_MultipleItems_size()
+       Input: item_0 
+    expected: 1
+      actual: 0
+FAILED test02_List_Add_MultipleItems_size()
+       Input: item_1 
+    expected: 2
+      actual: 0
+FAILED test02_List_Add_MultipleItems_size()
+       Input: item_2 
+    expected: 3
+      actual: 0
+FAILED test03_List_Check_Placement: Exception
+       Input: Add Items: item_0, item_1, item_2
+    expected: item_0, item_2, item_1
+      actual: java.lang.IndexOutOfBoundsException
+FAILED test04_Remove_From_List: Exception
+       Input: Add: 'item' - Remove: null
+    expected: item
+      actual: java.lang.IndexOutOfBoundsException
+FAILED test05_Use_List_Iterator_iterator_error: item not in iterator but should be
+       Input: item_0 -> item_30
+    expected: item_0
+      actual:  
+Passed Tests: 1; Failed Tests: 5
+==================== done
+
+==================== TESTING List_Sonu
+test00 failed: List_Sonu size() should be 0 at start, but size() = 1
+FAILED test01_List_Add_OneItem for List_Sonu
+       Input: List_Sonu 
+    expected: 1
+      actual: 2
+FAILED test02_List_Add_MultipleItems_size()
+       Input: item_0 
+    expected: 1
+      actual: 2
+FAILED test02_List_Add_MultipleItems_size()
+       Input: item_1 
+    expected: 2
+      actual: 3
+FAILED test02_List_Add_MultipleItems_size()
+       Input: item_2 
+    expected: 3
+      actual: 4
+FAILED test05_Use_List_Iterator_iterator_error: exception thrown
+       Input: item_0 -> item_30
+    expected: item_0
+      actual: java.lang.NullPointerException
+Passed Tests: 3; Failed Tests: 4
+==================== done
+
+==================== TESTING List_Sapan
+Unable to construct List_Sapan NO TESTS RUN
+==================== done
+
+==================== TESTING List_Tianrun
+FAILED test05_Use_List_Iterator_iterator_error: item in iterator is not correct
+       Input: item_0 -> item_30
+    expected: item_0
+      actual: item_1
+FAILED test05_Use_List_Iterator_iterator_error: item in iterator is not correct
+       Input: item_0 -> item_30
+    expected: item_1
+      actual: item_2
+FAILED test05_Use_List_Iterator_iterator_error: item in iterator is not correct
+       Input: item_0 -> item_30
+    expected: item_2
+      actual: item_3
+FAILED test05_Use_List_Iterator_iterator_error: item in iterator is not correct
+       Input: item_0 -> item_30
+    expected: item_3
+      actual: item_4
+FAILED test05_Use_List_Iterator_iterator_error: item in iterator is not correct
+       Input: item_0 -> item_30
+    expected: item_4
+      actual: item_5
+FAILED test05_Use_List_Iterator_iterator_error: item in iterator is not correct
+       Input: item_0 -> item_30
+    expected: item_5
+      actual: item_6
+FAILED test05_Use_List_Iterator_iterator_error: item in iterator is not correct
+       Input: item_0 -> item_30
+    expected: item_6
+      actual: item_7
+FAILED test05_Use_List_Iterator_iterator_error: item in iterator is not correct
+       Input: item_0 -> item_30
+    expected: item_7
+      actual: item_8
+FAILED test05_Use_List_Iterator_iterator_error: item in iterator is not correct
+       Input: item_0 -> item_30
+    expected: item_8
+      actual: item_9
+FAILED test05_Use_List_Iterator_iterator_error: item in iterator is not correct
+       Input: item_0 -> item_30
+    expected: item_9
+      actual: item_10
+FAILED test05_Use_List_Iterator_iterator_error: exception thrown
+       Input: item_0 -> item_30
+    expected: item_10
+      actual: java.lang.NullPointerException
+Passed Tests: 5; Failed Tests: 1
+==================== done
+
+==================== TESTING List_Roshan
+Passed Tests: 6; Failed Tests: 0
+==================== done
