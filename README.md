@@ -3,6 +3,7 @@ CS 367 Team Assignment
 
 14 total methods 
 Print number of successful and failed methods
+Add input sequence to output
 
 // Tasks for Nate
 -DONE isEmpty
