@@ -4,7 +4,7 @@ FAILED test08_List_Add_Index_Size: Added to index equal to list size
        Input: Add Items: item_0, item_1; Add at index 2: item_2
     expected: IndexOutOfBoundsException
       actual: No Exception thrown
-Passed Tests: 9; Failed Tests: 1
+Passed Tests: 12; Failed Tests: 1
 ==================== done
 
 ==================== TESTING List_Mingi
@@ -16,7 +16,7 @@ FAILED test08_List_Add_Index_Size: Added to index equal to list size
        Input: Add Items: item_0, item_1; Add at index 2: item_2
     expected: IndexOutOfBoundsException
       actual: No Exception thrown
-Passed Tests: 8; Failed Tests: 2
+Passed Tests: 11; Failed Tests: 2
 ==================== done
 
 ==================== TESTING List_Yash
@@ -48,7 +48,7 @@ FAILED test09_Check_Type_Invariance: Unable to complete test
        Input: Added: 20, 25 (Integer)
     expected: Class Match: Integer
       actual: N/A
-Passed Tests: 5; Failed Tests: 4
+Passed Tests: 8; Failed Tests: 4
 ==================== done
 
 ==================== TESTING List_Sonu
@@ -81,7 +81,7 @@ FAILED test08_List_Add_Index_Size: Added to index equal to list size
        Input: Add Items: item_0, item_1; Add at index 2: item_2
     expected: IndexOutOfBoundsException
       actual: No Exception thrown
-Passed Tests: 5; Failed Tests: 6
+Passed Tests: 8; Failed Tests: 6
 ==================== done
 
 ==================== TESTING List_Sapan
@@ -93,7 +93,7 @@ FAILED test08_List_Add_Index_Size: Added to index equal to list size
        Input: Add Items: item_0, item_1; Add at index 2: item_2
     expected: IndexOutOfBoundsException
       actual: No Exception thrown
-Passed Tests: 8; Failed Tests: 2
+Passed Tests: 11; Failed Tests: 2
 ==================== done
 
 ==================== TESTING List_Tianrun
@@ -141,9 +141,9 @@ FAILED test04_Use_List_Iterator_iterator_error: exception thrown
        Input: item_0 -> item_30
     expected: item_10
       actual: java.lang.NullPointerException
-Passed Tests: 9; Failed Tests: 1
+Passed Tests: 12; Failed Tests: 1
 ==================== done
 
 ==================== TESTING List_Roshan
-Passed Tests: 10; Failed Tests: 0
+Passed Tests: 13; Failed Tests: 0
 ==================== done

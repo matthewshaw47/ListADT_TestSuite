@@ -193,6 +193,20 @@ public class Test_ListImplementations {
         // Check implementation of ListADT
         test10_Check_Class_Implements_Interface(className, list);
         list = constructListOfString(className); // Clear the list
+        
+        // Ensure an exception is thrown if get is
+        // Is called with an invalid value
+        test11_Get_IndexOutOfBoundException(className, list);
+        list = constructListOfString(className); // Clear the list
+        
+        // Ensure an exception is thrown if remove is
+        // Is called with an invalid value
+        test12_Remove_IndexOutOfBoundException(className, list);
+        list = constructListOfString(className); // Clear the list
+        
+        // Check that contains works on an item as it is added
+        test13_Contains_Added_Items(className, list);
+        list = constructListOfString(className); // Clear the list
 
         // Print out the number of successful and failed tests
         System.out.println("Passed Tests: " + successes + "; "
@@ -550,11 +564,13 @@ public class Test_ListImplementations {
      * @param ClassName the name of the class being tested
      * @param list the list created from the class
      */
-    private static void test06_List_Add_Null(String className, ListADT<String> list ) {
+    private static void test06_List_Add_Null(String className, ListADT<String> list ) 
+    {
     	// Name of test
     	String name = new Object(){}.getClass().getEnclosingMethod().getName();
     	
-    	try {
+    	try 
+    	{
     		
     		// Trigger determining pass/fail of the test
             list.add(null);
@@ -567,7 +583,9 @@ public class Test_ListImplementations {
     		failCheck(failed);
     		return;
     		
-    	} catch ( Exception e ) {
+    	} 
+    	catch ( Exception e ) 
+    	{
     		// Report status of test
     		failCheck(failed);
     		return;
@@ -581,11 +599,13 @@ public class Test_ListImplementations {
      * @param ClassName the name of the class being tested
      * @param list the list created from the class
      */
-    private static void test07_List_Add_Index_Negative_One(String className, ListADT<String> list ) {
+    private static void test07_List_Add_Index_Negative_One(String className, ListADT<String> list ) 
+    {
     	// Name of Test
     	String name = new Object(){}.getClass().getEnclosingMethod().getName();
     	
-    	try {
+    	try 
+    	{
     		list.add("item_0");
     		// Trigger to throw IndexOutOfBoundsException
     		list.add(-1, "item_-1");
@@ -598,7 +618,9 @@ public class Test_ListImplementations {
     		failCheck(failed);
     		return;
     		
-    	} catch ( Exception e ) {
+    	} 
+    	catch ( Exception e ) 
+    	{
     		// Report status of test
     		failCheck(failed);
     		return;
@@ -612,11 +634,13 @@ public class Test_ListImplementations {
      * @param ClassName the name of the class being tested
      * @param list the list created from the class
      */
-    private static void test08_List_Add_Index_Size(String ClassName, ListADT<String> list ) {
+    private static void test08_List_Add_Index_Size(String ClassName, ListADT<String> list ) 
+    {
     	// Name of Test
     	String name = new Object(){}.getClass().getEnclosingMethod().getName();
     	
-    	try {
+    	try 
+    	{
     		// Initialize list to size of 2
     		list.add("item_0");
     		list.add("item_1");
@@ -633,7 +657,9 @@ public class Test_ListImplementations {
     		failCheck(failed);
     		return;
     		
-    	} catch ( Exception e ) {
+    	} 
+    	catch ( Exception e ) 
+    	{
     		// Report status of test
     		failCheck(failed);
     		return;
@@ -647,11 +673,13 @@ public class Test_ListImplementations {
      * @param ClassName the name of the class being tested
      * @param list the list created from the class
      */
-    private static void test09_Check_Type_Invariance(String className, ListADT<String> list ) {
+    private static void test09_Check_Type_Invariance(String className, ListADT<String> list ) 
+    {
     	// Name of test
     	String name = new Object(){}.getClass().getEnclosingMethod().getName();
     	
-    	try {
+    	try 
+    	{
     		// Get the class for the given name
             Class<?> listClassName = Class.forName(className);
             // Get the class' constructor
@@ -675,7 +703,8 @@ public class Test_ListImplementations {
         	Object val = intList.get(1);
         	
         	// Check class type of returned value
-        	if ( !val.getClass().equals(Integer.class) ) {
+        	if ( !val.getClass().equals(Integer.class) ) 
+        	{
         		// Report failure if type mismatch
         		failMsg(name + ": Class type changed within list",
                         "Added: 20, 25 (Integer)", "Class Match: Integer", "" + val.getClass().getName() );
@@ -685,7 +714,9 @@ public class Test_ListImplementations {
         	failCheck(failed);
         	return;
     				
-    	} catch (Exception e) {
+    	} 
+    	catch (Exception e) 
+    	{
     		// Report test error
     		failMsg(name + ": Unable to complete test", "Added: 20, 25 (Integer)", "Class Match: Integer", "N/A");
     		return;
@@ -699,19 +730,23 @@ public class Test_ListImplementations {
      * @param ClassName the name of the class being tested
      * @param list the list created from the class
      */
-    private static void test10_Check_Class_Implements_Interface(String className, ListADT<String> list ) {
+    private static void test10_Check_Class_Implements_Interface(String className, ListADT<String> list ) 
+    {
     	// Name of test
     	String name = new Object(){}.getClass().getEnclosingMethod().getName();
 
-    	try {
+    	try 
+    	{
     		// Get the class for the given name
     		Class<?> listClassName = Class.forName(className);
     		// Get the interfaces used in the class
     		Class<?>[] interfaces = listClassName.getInterfaces();
     		// Check that class used exactly one interface
-    		if (interfaces.length == 1) {
+    		if (interfaces.length == 1) 
+    		{
         		// Check that correct interface was used
-        		if ( !interfaces[0].getName().equals("ListADT") ) {
+        		if ( !interfaces[0].getName().equals("ListADT") ) 
+        		{
         			
         			failMsg(name + ": Does not implement ListADT Interface",
         				"Get Interfaces", "ListADT","" + interfaces[0]);
@@ -722,10 +757,75 @@ public class Test_ListImplementations {
     		failCheck(failed);
     		return;
 
-    	} catch (ClassNotFoundException e) {
+    	} 
+    	catch (ClassNotFoundException e) 
+    	{
     		e.printStackTrace();
     	}
 
     }
+    
+    private	static void test11_Get_IndexOutOfBoundException(String className, ListADT<String> list) 
+    {
+    	// Name of test
+    	String name = new Object(){}.getClass().getEnclosingMethod().getName();
+		try
+		{
+			list.get(-1);
+			// Failure output with test name, sequence,
+            // Expected output, and actual output
+            failMsg(name + ": get(-1)", "get(-1)", "_IndexOutOfBoundsException", "" + list.get(-1));
+            // Test Failed
+            failed = true;
+		}
+		catch(IndexOutOfBoundsException e) { }
+		// Report status of test
+		failCheck(failed);
+	}
+	
+
+	private static void test12_Remove_IndexOutOfBoundException(String className, ListADT<String> list) 
+	{
+		// Name of test
+    	String name = new Object(){}.getClass().getEnclosingMethod().getName();
+		try
+		{
+			String removed = list.remove(-1);
+			// Failure output with test name, sequence,
+            // Expected output, and actual output
+            failMsg(name + ": remove(-1)", "remove(-1)", "_IndexOutOfBoundsException", "" + removed);
+            // Test Failed
+            failed = true;
+		}
+		catch(IndexOutOfBoundsException e) { }
+		// Report status of test
+		failCheck(failed);
+	}
+
+	private static void test13_Contains_Added_Items(String className, ListADT<String> list) 
+	{
+		// Name of test
+    	String name = new Object(){}.getClass().getEnclosingMethod().getName();
+    	// Items to add to list
+		int numItems = 5;
+		for ( int i = 0; i < numItems; i++ ) 
+		{
+			// Item to add
+			String s = "" + i;
+			// Expected value
+			boolean expected = true;
+			list.add(s);
+			if ( expected != list.contains(s) ) 
+			{
+				// Failure output with test name, sequence,
+	            // Expected output, and actual output
+	            failMsg(name + ": remove(-1)", "remove(-1)", "" + expected, "" + list.contains(s));
+	            // Test Failed
+	            failed = true;
+			}			
+		}
+		// Report status of test
+		failCheck(failed);
+	}
         
 }
