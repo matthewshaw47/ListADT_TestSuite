@@ -1,10 +1,22 @@
 
 ==================== TESTING List_Deb
-Passed Tests: 6; Failed Tests: 0
+FAILED test08_List_Add_Index_Size: Added to index equal to list size
+       Input: Add Items: item_0, item_1; Add at index 2: item_2
+    expected: IndexOutOfBoundsException
+      actual: No Exception thrown
+Passed Tests: 9; Failed Tests: 1
 ==================== done
 
 ==================== TESTING List_Mingi
-Passed Tests: 6; Failed Tests: 0
+FAILED test06_List_Add_Null: Accepted null as a valid input value
+       Input: null
+    expected: IllegalArgumentException
+      actual: No Exception thrown
+FAILED test08_List_Add_Index_Size: Added to index equal to list size
+       Input: Add Items: item_0, item_1; Add at index 2: item_2
+    expected: IndexOutOfBoundsException
+      actual: No Exception thrown
+Passed Tests: 8; Failed Tests: 2
 ==================== done
 
 ==================== TESTING List_Yash
@@ -24,19 +36,19 @@ FAILED test02_List_Add_MultipleItems_size()
        Input: item_2 
     expected: 3
       actual: 0
-FAILED test03_List_Check_Placement: Exception
-       Input: Add Items: item_0, item_1, item_2
-    expected: item_0, item_2, item_1
-      actual: java.lang.IndexOutOfBoundsException
-FAILED test04_Remove_From_List: Exception
+FAILED test03_Remove_From_List: Exception
        Input: Add: 'item' - Remove: null
     expected: item
       actual: java.lang.IndexOutOfBoundsException
-FAILED test05_Use_List_Iterator_iterator_error: item not in iterator but should be
+FAILED test04_Use_List_Iterator_iterator_error: item not in iterator but should be
        Input: item_0 -> item_30
     expected: item_0
       actual:  
-Passed Tests: 1; Failed Tests: 5
+FAILED test09_Check_Type_Invariance: Unable to complete test
+       Input: Added: 20, 25 (Integer)
+    expected: Class Match: Integer
+      actual: N/A
+Passed Tests: 5; Failed Tests: 4
 ==================== done
 
 ==================== TESTING List_Sonu
@@ -57,65 +69,81 @@ FAILED test02_List_Add_MultipleItems_size()
        Input: item_2 
     expected: 3
       actual: 4
-FAILED test05_Use_List_Iterator_iterator_error: exception thrown
+FAILED test04_Use_List_Iterator_iterator_error: exception thrown
        Input: item_0 -> item_30
     expected: item_0
       actual: java.lang.NullPointerException
-Passed Tests: 3; Failed Tests: 4
+FAILED test06_List_Add_Null: Accepted null as a valid input value
+       Input: null
+    expected: IllegalArgumentException
+      actual: No Exception thrown
+FAILED test08_List_Add_Index_Size: Added to index equal to list size
+       Input: Add Items: item_0, item_1; Add at index 2: item_2
+    expected: IndexOutOfBoundsException
+      actual: No Exception thrown
+Passed Tests: 5; Failed Tests: 6
 ==================== done
 
 ==================== TESTING List_Sapan
-Unable to construct List_Sapan NO TESTS RUN
+FAILED test04_Use_List_Iterator_iterator_error: item not in iterator but should be
+       Input: item_0 -> item_30
+    expected: item_10
+      actual:  
+FAILED test08_List_Add_Index_Size: Added to index equal to list size
+       Input: Add Items: item_0, item_1; Add at index 2: item_2
+    expected: IndexOutOfBoundsException
+      actual: No Exception thrown
+Passed Tests: 8; Failed Tests: 2
 ==================== done
 
 ==================== TESTING List_Tianrun
-FAILED test05_Use_List_Iterator_iterator_error: item in iterator is not correct
+FAILED test04_Use_List_Iterator_iterator_error: item in iterator is not correct
        Input: item_0 -> item_30
     expected: item_0
       actual: item_1
-FAILED test05_Use_List_Iterator_iterator_error: item in iterator is not correct
+FAILED test04_Use_List_Iterator_iterator_error: item in iterator is not correct
        Input: item_0 -> item_30
     expected: item_1
       actual: item_2
-FAILED test05_Use_List_Iterator_iterator_error: item in iterator is not correct
+FAILED test04_Use_List_Iterator_iterator_error: item in iterator is not correct
        Input: item_0 -> item_30
     expected: item_2
       actual: item_3
-FAILED test05_Use_List_Iterator_iterator_error: item in iterator is not correct
+FAILED test04_Use_List_Iterator_iterator_error: item in iterator is not correct
        Input: item_0 -> item_30
     expected: item_3
       actual: item_4
-FAILED test05_Use_List_Iterator_iterator_error: item in iterator is not correct
+FAILED test04_Use_List_Iterator_iterator_error: item in iterator is not correct
        Input: item_0 -> item_30
     expected: item_4
       actual: item_5
-FAILED test05_Use_List_Iterator_iterator_error: item in iterator is not correct
+FAILED test04_Use_List_Iterator_iterator_error: item in iterator is not correct
        Input: item_0 -> item_30
     expected: item_5
       actual: item_6
-FAILED test05_Use_List_Iterator_iterator_error: item in iterator is not correct
+FAILED test04_Use_List_Iterator_iterator_error: item in iterator is not correct
        Input: item_0 -> item_30
     expected: item_6
       actual: item_7
-FAILED test05_Use_List_Iterator_iterator_error: item in iterator is not correct
+FAILED test04_Use_List_Iterator_iterator_error: item in iterator is not correct
        Input: item_0 -> item_30
     expected: item_7
       actual: item_8
-FAILED test05_Use_List_Iterator_iterator_error: item in iterator is not correct
+FAILED test04_Use_List_Iterator_iterator_error: item in iterator is not correct
        Input: item_0 -> item_30
     expected: item_8
       actual: item_9
-FAILED test05_Use_List_Iterator_iterator_error: item in iterator is not correct
+FAILED test04_Use_List_Iterator_iterator_error: item in iterator is not correct
        Input: item_0 -> item_30
     expected: item_9
       actual: item_10
-FAILED test05_Use_List_Iterator_iterator_error: exception thrown
+FAILED test04_Use_List_Iterator_iterator_error: exception thrown
        Input: item_0 -> item_30
     expected: item_10
       actual: java.lang.NullPointerException
-Passed Tests: 5; Failed Tests: 1
+Passed Tests: 9; Failed Tests: 1
 ==================== done
 
 ==================== TESTING List_Roshan
-Passed Tests: 6; Failed Tests: 0
+Passed Tests: 10; Failed Tests: 0
 ==================== done
